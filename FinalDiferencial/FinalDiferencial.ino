@@ -59,8 +59,8 @@ double constValue = 4.2; // (1000*2*pi)/R ---> R = 1496 Resolucion encoder cuadr
 double uRobot  = 0;
 double wRobot  = 0;
 double phi = 0;
-const double R = 0.0335; // radio de la llanta cm
-const double d = 0.17; // Distancia entre llantas cm
+const double R = 0.0325; // radio de la llanta 6.5 cm
+const double d = 0.16; // Distancia entre llantas cm 16
 
 void setup()
 {
