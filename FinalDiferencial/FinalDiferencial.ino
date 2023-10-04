@@ -68,8 +68,8 @@ void setup()
   
   ////////////////// SINTONIA FINA PID //////////////////
   
-  motorR.setGains(0.07 , 0.27, 0.05); // (Kc,Ti,Td)
-  motorL.setGains(0.07 , 0.27, 0.05); // (Kc,Ti,Td)
+  motorR.setGains(0.15, 0.09, 0.034); // (Kc,Ti,Td)
+  motorL.setGains(0.15, 0.09, 0.034); // (Kc,Ti,Td)
   
   ////////////////// Limites de señales //////////////////
   motorR.setCvLimits(255,20);
@@ -78,7 +78,7 @@ void setup()
   motorL.setCvLimits(255,20);
   motorL.setPvLimits(11,0);  
   
-  pinMode(C1R, INPUT);
+  pinMode(C1R, INPUT);          
   pinMode(C2R, INPUT);
   pinMode(C1L, INPUT);
   pinMode(C2L, INPUT);

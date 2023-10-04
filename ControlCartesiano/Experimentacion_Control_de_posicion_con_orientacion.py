@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 #################### TIEMPO ###################
 
-tf = 18 # tiempo de simulacion
+tf = 17 # tiempo de simulacion
 ts = 0.1 #  tiempo de muestreo
 t = np.arange(0,tf+ts,ts) # vector tiempo
 
@@ -25,7 +25,7 @@ phi[0] = 0 # Orientacion inicial en radianes [rad]
 ################### POSICION DESEADA ####################
 hxd = 1
 hyd = -1
-phid = np.pi/2
+phid = np.pi/2 #orientación deseada
 
 ################### VELOCIDADES DE REFERENCIA #################### 
 
@@ -65,7 +65,7 @@ for k in range(N):
      thetha[k] = np.arctan2((hyd-hy[k]),(hxd-hx[k]))-phid
 
      # Parametros de control
-     kmax = 1.7
+     kmax = 1.8
      g = 10
      gain[k] = kmax/(1+g*l[k])
      
@@ -110,7 +110,7 @@ arduino.close() # Cerrar puerto serial
 
 # Cargar componentes del robot
 pathStl = "stl"
-color = ['black','black','gray','gray','white','blue']
+color = ['yellow','black','gray','gray','white','black']
 uniciclo = robotics(pathStl,color)
 
 # Configurar escena
