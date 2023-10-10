@@ -59,7 +59,7 @@ double constValue = 4.2; // (1000*2*pi)/R ---> R = 1496 Resolucion encoder cuadr
 double uRobot  = 0;
 double wRobot  = 0;
 double phi = 0;
-const double R = 0.0325; // radio de la llanta 6.5 cm
+const double R = 0.0324; // radio de la llanta- Diametro 6.49986 cm
 const double d = 0.16; // Distancia entre llantas cm 16
 
 void setup()
@@ -68,15 +68,16 @@ void setup()
   
   ////////////////// SINTONIA FINA PID //////////////////
   
-  motorR.setGains(0.15, 0.09, 0.034); // (Kc,Ti,Td)
-  motorL.setGains(0.15, 0.09, 0.034); // (Kc,Ti,Td)
-  
+//  motorR.setGains(0.15, 0.09, 0.034); // (Kc,Ti,Td)
+//  motorL.setGains(0.15, 0.09, 0.034); // (Kc,Ti,Td)
+  motorR.setGains(0.07,0.053,0.07); // (Kc,Ti,Td)
+  motorL.setGains(0.07,0.053,0.07); // (Kc,Ti,Td)
   ////////////////// Limites de señales //////////////////
-  motorR.setCvLimits(255,20);
-  motorR.setPvLimits(11,0);  
+  motorR.setCvLimits(120,20);
+  motorR.setPvLimits(5,0);  
 
-  motorL.setCvLimits(255,20);
-  motorL.setPvLimits(11,0);  
+  motorL.setCvLimits(120,20);
+  motorL.setPvLimits(5,0);  
   
   pinMode(C1R, INPUT);          
   pinMode(C2R, INPUT);

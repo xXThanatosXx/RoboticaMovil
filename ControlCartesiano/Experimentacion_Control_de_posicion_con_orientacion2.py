@@ -24,7 +24,7 @@ phi[0] = 0 # Orientacion inicial en radianes [rad]
 
 ################### POSICION DESEADA ####################
 hxd = 1
-hyd = -1
+hyd = 1
 phid = np.pi/2 #orientación deseada
 
 ################### VELOCIDADES DE REFERENCIA #################### 
